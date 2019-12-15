@@ -1,0 +1,77 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+body{
+	background-color: #F4F4F4;
+}
+/* ================================================= */
+/* Survey Notice Section */
+#notice-section{
+	width: 60%;
+	margin: auto;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+	background-color: #fff;
+	color: #111;
+	padding: 10px;
+	border-radius: 5px;
+
+}
+#notice-section h3{
+	font-size: 24px;
+}
+#notice-section p{
+	font-size: 16px;
+	margin-top: 5px;
+}
+#notice-section h4{
+	margin-top: 5px;
+}
+
+/* ================================================= */
+/* Survey Section */
+#survey-section{
+	width: 60%;
+	margin: auto;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+	background-color: #fff;
+	color: #111;
+	padding: 10px;
+	border-radius: 5px;
+}
+/* Survey Section : item*/
+#survey-section .survey-item{
+	width: 97%;
+	padding: 10px;
+	transition: 130ms all ease-in-out;
+}
+#survey-section .survey-item:hover{
+	cursor: pointer;
+	background-color: #f3f3f3;
+}
+#survey-section .survey-item img{
+	display: inline;
+	width: 5%;
+}
+#survey-section .survey-item h4{
+	display: inline;
+}
+/* Complete The Step Button */
+#complete-step-btn{
+  display: none;
+  float: right;
+  text-decoration: none;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #42B3FA;
+  font-weight: 900;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  transition: 150ms all ease-in-out;
+}
+#complete-step-btn:hover{
+  background-color: #059dfc;
+}

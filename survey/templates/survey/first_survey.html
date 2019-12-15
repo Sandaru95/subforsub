@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>5 Channel Subscribe Process | SubForSub - The Best SubForSub System for You To Get More Subscribers</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <!-- SEO METAS LISTOUT -->
+    {% include 'seo_metas.html' %}
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'survey/css/first_survey.css' %}">
+</head>
+
+<body>
+    <!-- ====================================================================================== -->
+    <!-- Notice Section -->
+    <section id="notice-section">
+        <h3>5 Channel Subscribe Process</h3>
+        <p>Please Read,</p>
+        <p>This is the 5 channel subscribe process that You've to complete to get started with our platform. Complete this 5 channel subscription process. You just have to subscribe to the 5 channels listed below. After you complete this step, we will make sure to give you one subscriber within 20 minutes and another 5-10 subscribers within a day. So you subscribe 5 and you also get 5 or more subscribers within a day.</p>
+        <h4>All in short: You now have to subscribe 5 channels and then You'll receive 5-10 subscriptions within a day</h4>
+    </section>
+    <!-- ====================================================================================== -->
+    <!-- Survey section -->
+    <section id="survey-section">
+        <h4>Note: For our system to work correctly between users please make sure that You did this step honestly</h4>
+        <p>After subscribing to the channel listed below the continue button will appear.</p>
+        <br>
+        {% for profile in signal_profile_list %}
+        <div class="survey-item" onclick="openTheYouTubeChannel('{{ profile.channel_url }}');surveyItemSubmission({{ forloop.counter }});">
+            <img src="{% static 'survey/img/youtube.png' %}" alt="subforsub get more subscribers">
+            <h4>{{ profile.name }}</h4>
+        </div>
+        {% endfor %}
+        <br>
+        <!-- Complete The Steps Button -->
+        <a id="complete-step-btn" href="{% url 'dashboard:index_account' %}" onclick="completeStep();">Complete Step</a>
+    </section>
+    <!-- ====================================================================================== -->
+    <!-- CSRF token for temporaraly Submissions -->
+    {% csrf_token %}
+
+    <!-- External Scripts -->
+    <script src="{% static 'survey/js/first_survey.js' %}"></script>
+</body>
+
+</html>

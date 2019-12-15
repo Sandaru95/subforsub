@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SignUp | SubForSub - The Best SubForSub System for You To Get More Subscribers</title>
+    {% load static %}
+    <!-- SEO METAS LISTOUT -->
+    {% include 'seo_metas.html' %}
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'accounts/fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}">
+</head>
+<body>
+
+    <div class="main">
+
+        <h1>SignUp</h1>
+        <div class="container">
+            <div class="sign-up-content">
+                <form action="#" method="POST" class="register-form" id="login-form">
+                    {% csrf_token %}
+                    <div class="form-textbox">
+                        <label for="username">User name</label>
+                        <input type="text" name="username" id="username" placeholder="Your Username">
+                    </div>
+                    <div class="form-textbox">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="example@gmail.com">
+                    </div>
+                    <div class="form-textbox">
+                        <label for="channel-url">Channel URL</label>
+                        <input type="url" name="channel-url" id="channel-url" placeholder="https://www.youtube/...">
+                    </div>
+                    <div class="form-textbox">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Your Password">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                    </div>
+
+                    <div class="form-textbox">
+                        <input type="submit" name="submit" id="submit" class="submit" value="Continue" />
+                    </div>
+                </form>
+
+                <p class="loginhere">
+                    Already have an account ?<a href="{% url 'accounts:login' %}" class="loginhere-link"> Login</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'accounts/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'accounts/js/main.js' %}"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
